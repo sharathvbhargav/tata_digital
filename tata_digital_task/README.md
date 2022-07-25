@@ -6,19 +6,19 @@ A new Flutter project.
 
 1. What is the difference between Hot Reload and Hot Restart?
 
-                Hot Reload allows us to see the reflected change after bug fixes, building User interfaces and even 
+              Hot Reload allows us to see the reflected change after bug fixes, building User interfaces and even 
         adding certain features to the app without running your application over and over again. Hot reload 
         do not destroy the preserved State value
    
-                Hot restart loads code changes into the VM, and restarts the Flutter app, losing the app state. 
+              Hot restart loads code changes into the VM, and restarts the Flutter app, losing the app state. 
          Full restart restarts the iOS, Android, or web app. This takes longer because it also re-compiles the 
         Java / Kotlin and ObjC / Swift code. Hot restart destroys the preserved State value and set them to 
         their default
 
 2. Can we nest the Scaffold widget? Why or Why not?
 
-                Scaffold can be nested as other widgets. But its not good practice or recommended to do so. The 
-         Scaffold was designed to be the single top level container for a MaterialApp and it's typically not 
+              Scaffold can be nested as other widgets. But its not good practice or recommended to do so. The 
+        Scaffold was designed to be the single top level container for a MaterialApp and it's typically not 
         necessary to nest scaffolds. For example, if we need multiple toolbars we can use other widgets and 
         design the screen. But using a single scaffold for a particular screen is best coding practice
    
@@ -28,7 +28,7 @@ A new Flutter project.
         Step 2: Create the Flutter platform client and select Android (Java/ Kotlin) and iOS (Objective C/ Swift)
         Step 3: Add an Android platform-specific implementation
         Step 4: Add an iOS platform-specific implementation
-         Step 5: Separate platform-specific code from UI code
+        Step 5: Separate platform-specific code from UI code
    
 4. What do you know about event loop and what is the relationship with isolates?
 
@@ -73,26 +73,27 @@ A new Flutter project.
 3. Identify the problem in the following code block and correct it.
 
    //Problem
-   String longOperationMethod(){
-      var counting =0;
-      for(var i=0; i<=1000000000; i++){
-         counting = i;
-      }
-      return "$counting! times I print the value";
-   }
+   
+        String longOperationMethod(){
+            var counting =0;
+            for(var i=0; i<=1000000000; i++){
+               counting = i;
+            }
+            return "$counting! times I print the value";
+        }
 
    //Solution
 
-   void main() {
-      String x = longOperationMethod();
-      print(x);
-   }
-   
-   String longOperationMethod(){
-      int counting =0;
-      for(int i=0; i<1000000000; i++){
-         counting++;
-      }
-      return '$counting times I print the value';
-   }
+       void main() {
+          String x = longOperationMethod();
+          print(x);
+       }
+
+       String longOperationMethod(){
+          int counting =0;
+          for(int i=0; i<1000000000; i++){
+             counting++;
+          }
+          return '$counting times I print the value';
+       }
 
