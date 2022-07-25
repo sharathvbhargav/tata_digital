@@ -1,6 +1,6 @@
 # tata_digital_task
 
-A new Flutter project.
+Descriptive and Coding task for Tata Digital
 
 ## Descriptive:
 
